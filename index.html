@@ -261,6 +261,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		listaObjetos.bolsas.forEach(function(elemento){
 
+			 		var PDESCONTO = parseFloat( (elemento.price * 10)/100 );
+					var valor_final_vista = (elemento.price - PDESCONTO).toFixed(2);
+
 				 	conteudo += ' 	<div class="col-xs-4 allBox bolsas">';
 					conteudo += ' 			<div class="content_box">';
 					conteudo += ' 				<a href="#">';
@@ -271,8 +274,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					conteudo += ' 	<h6>'+elemento.name+'</h6>';
 					conteudo += ' 	<div class="size_1">';
-						conteudo += ' 	<span class="item_price">R$ '+elemento.price+'</span><br/>';
-						conteudo += ' 	<span style="float: none;" class="w_nav">Até '+elemento.portion+'x com acrescimos</span>';
+						conteudo += ' 	<span class="item_price">R$ '+valor_final_vista+' à vista</span><br/>';
+						conteudo += ' 	<span style="float: none;" class="w_nav">Ou em '+elemento.portion+'x de R$ '+(elemento.price/elemento.portion).toFixed(2)+'</span>';
 						conteudo += ' 	<div class="clearfix"></div>';
 						conteudo += ' 	</div>';
 					conteudo += ' 	</div>';
@@ -288,6 +291,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		conteudo = "";
 		listaObjetos.camisas_masculinas.forEach(function(elemento){
 
+					var PDESCONTO = parseFloat( (elemento.price * 10)/100 );
+					var valor_final_vista = (elemento.price - PDESCONTO).toFixed(2);
+
 				 	conteudo += ' 	<div class="col-xs-4 allBox camisas_masculinas">';
 					conteudo += ' 			<div class="content_box">';
 					conteudo += ' 				<a href="#">';
@@ -298,8 +304,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					conteudo += ' 	<h6>'+elemento.name+'</h6>';
 					conteudo += ' 	<div class="size_1">';
-						conteudo += ' 	<span class="item_price">R$ '+elemento.price+'</span><br/>';
-						conteudo += ' 	<span style="float: none;" class="w_nav">Até '+elemento.portion+'x com acrescimos</span><br/>';
+						conteudo += ' 	<span class="item_price">R$ '+valor_final_vista+' à vista</span><br/>';
+						conteudo += ' 	<span style="float: none;" class="w_nav">Ou em '+elemento.portion+'x de R$ '+(elemento.price/elemento.portion).toFixed(2)+'</span><br/>';
 						conteudo += ' 	<span style="float: none;" class="w_nav">Tamanho: '+elemento.size+'</span>';
 						conteudo += ' 	<div class="clearfix"></div>';
 						conteudo += ' 	</div>';
@@ -317,6 +323,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		conteudo = "";
 		listaObjetos.camisas_femininas.forEach(function(elemento){
 
+					var PDESCONTO = parseFloat( (elemento.price * 10)/100 );
+					var valor_final_vista = (elemento.price - PDESCONTO).toFixed(2);
+
 					conteudo += ' 	<div class="col-xs-4 allBox camisas_femininas">';
 					conteudo += ' 			<div class="content_box">';
 					conteudo += ' 				<a href="#">';
@@ -327,8 +336,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					conteudo += ' 	<h6>'+elemento.name+'</h6>';
 					conteudo += ' 	<div class="size_1">';
-						conteudo += ' 	<span class="item_price">R$ '+elemento.price+'</span><br/>';
-						conteudo += ' 	<span style="float: none;" class="w_nav">Até '+elemento.portion+'x com acrescimos</span><br/>';
+						conteudo += ' 	<span class="item_price">R$ '+valor_final_vista+' à vista</span><br/>';
+						conteudo += ' 	<span style="float: none;" class="w_nav">Ou em '+elemento.portion+'x de R$ '+(elemento.price/elemento.portion).toFixed(2)+'</span><br/>';
 						conteudo += ' 	<span style="float: none;" class="w_nav">Tamanho: '+elemento.size+'</span>';
 						conteudo += ' 	<div class="clearfix"></div>';
 						conteudo += ' 	</div>';
@@ -346,6 +355,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		conteudo = "";
 		listaObjetos.gravatas.forEach(function(elemento){
 
+			var PDESCONTO = parseFloat( (elemento.price * 10)/100 );
+			var valor_final_vista = (elemento.price - PDESCONTO).toFixed(2);
+
 					conteudo += ' 	<div class="col-xs-4 allBox gravatas">';
 					conteudo += ' 			<div class="content_box">';
 					conteudo += ' 				<a href="#">';
@@ -356,8 +368,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					conteudo += ' 	<h6>'+elemento.name+'</h6>';
 					conteudo += ' 	<div class="size_1">';
-						conteudo += ' 	<span class="item_price">R$ '+elemento.price+'</span><br/>';
-						conteudo += ' 	<span style="float: none;" class="w_nav">Até '+elemento.portion+'x com acrescimos</span><br/>';
+						conteudo += ' 	<span class="item_price">R$ '+valor_final_vista+' à vista</span><br/>';
+						conteudo += ' 	<span style="float: none;" class="w_nav">Ou em '+elemento.portion+'x de R$ '+(elemento.price/elemento.portion).toFixed(2)+'</span><br/>';
 						conteudo += ' 	<span style="float: none;" class="w_nav">Tamanho: '+elemento.size+'</span>';
 						conteudo += ' 	<div class="clearfix"></div>';
 						conteudo += ' 	</div>';
@@ -374,6 +386,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		conteudo = "";
 		listaObjetos.outros.forEach(function(elemento){
 
+			var PDESCONTO = parseFloat( (elemento.price * 10)/100 );
+			var valor_final_vista = (elemento.price - PDESCONTO).toFixed(2);
+
+
 					conteudo += ' 	<div class="col-xs-4 allBox outros">';
 					conteudo += ' 			<div class="content_box">';
 					conteudo += ' 				<a href="#">';
@@ -384,8 +400,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					conteudo += ' 	<h6>'+elemento.name+'</h6>';
 					conteudo += ' 	<div class="size_1">';
-						conteudo += ' 	<span class="item_price">R$ '+elemento.price+'</span><br/>';
-						conteudo += ' 	<span style="float: none;" class="w_nav">Até '+elemento.portion+'x com acrescimos</span><br/>';
+						conteudo += ' 	<span class="item_price">R$ '+valor_final_vista+' à vista</span><br/>';
+						conteudo += ' 	<span style="float: none;" class="w_nav">Ou em '+elemento.portion+'x de R$ '+(elemento.price/elemento.portion).toFixed(2)+'</span><br/>';
 						conteudo += ' 	<div class="clearfix"></div>';
 						conteudo += ' 	</div>';
 					conteudo += ' 	</div>';
