@@ -6,17 +6,17 @@
 
  //name : "Bolsa" , description: " " , price: 180.00 ,portion: 2 , image: "IMG-20151117-WA0002.jpg" , directory: "bolsas" 
  $bolsas = array();
- $bolsas_list = scandir($directory."/bolsas");
+ $bolsas_list = scandir($directory."/sapatos");
 
  foreach($bolsas_list as $bolsa){
 	
 	$bolsa = array(
-		"name" => "Bolsa",
+		"name" => "Sapatos",
 		"description" => "",
 		"price" => " - ",
 		"portion" => "2",
 		"image" => $bolsa,
-		"directory" => "bolsas"
+		"directory" => "sapatos"
 	);
  		
 	array_push($bolsas, $bolsa);	
